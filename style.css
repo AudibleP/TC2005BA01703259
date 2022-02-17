@@ -1,0 +1,17 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0 auto;
+    max-width: 50em;
+}
+/* El que mas se usa */
+.abc{
+    font-size: large;
+}
+#bcd{
+    background-color: gray;
+}
+a:hover{
+    color:rgb(255, 0, 0);
+}
