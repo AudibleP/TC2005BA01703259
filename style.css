@@ -1,16 +1,26 @@
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 body{
     margin: 0 auto;
     max-width: 50em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+    background: url("https://i.pinimg.com/736x/5b/92/ef/5b92efe1762aec4c12e0aa07323c84ff.jpg");
 }
-/* El que mas se usa */
-.abc{
-    font-size: large;
+#title{
+    color: rgb(0, 0, 0);
 }
-#bcd{
-    background-color: gray;
+.subtitle{
+    color:rgb(12, 12, 12);
+}
+.subsub{
+    color: rgb(46, 46, 46);
+}
+.para-text{
+    color: rgb(100, 100, 100);
+}
+.list-item{
+    color: rgb(99, 99, 99);
 }
 a:hover{
     color:rgb(255, 0, 0);
