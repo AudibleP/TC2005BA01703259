@@ -1,4 +1,3 @@
-
 let boton_prob1 = document.getElementById("problema1");
 function prob1(){
     document.write("Recarga la pagina para regresar");
@@ -108,7 +107,7 @@ function showTextNode(textNodeIndex) {
     if (showOption(option)) {
       const button = document.createElement('button')
       button.innerText = option.text
-      button.classList.add('btn')
+      button.classList.add('button')
       button.addEventListener('click', () => selectOption(option))
       optionButtonsElement.appendChild(button)
     }
@@ -266,7 +265,7 @@ const textNodes = [
     text: 'Despues de una leccion de vida de Ricardo y Lalo, logras pasar la materia.',
     options: [
       {
-        text: 'Filicidades, jugar otra vez?.',
+        text: 'Felicidades, jugar otra vez?.',
         nextText: -1
       }
     ]

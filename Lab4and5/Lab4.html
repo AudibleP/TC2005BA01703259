@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laboratorio 4 y 5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="fondo has-background-info-dark">
+        <h1 class="title is-size-1 has-text-centered has-text-white">Laboratorio 4 y 5</h1>
+        <div class="has-text-centered has-text-white">
+            <p class="is-size-3">Problema 1: Tabla de Cuadrados</p>
+            
+            <button id="problema1">Answer</button>
+
+            <p class="is-size-3">Problema 2: Suma de Números</p>
+            <button id="problema2">Answer</button>
+            <p id="res_prob2"></p>
+
+            <p class="is-size-3">Problema 3: Contador</p>
+            <p id="problema3"></p>
+            <p id="res_prob3"></p>
+
+            <p class="is-size-3">Problema 4: Promedio</p>
+            <p id="problema4"></p>
+            <p id="res_prob4"></p>
+
+            <p class="is-size-3">Problema 5: Inverso</p>
+            <div id="resultados5"></div>
+
+            <p class="is-size-3">Problema 6: VideoGame</p>
+            <div id="text">Text</div>
+            <div id="option-buttons">
+                <button class="button">Option 1</button>
+                <button class="button">Option 2</button>
+                <button class="button">Option 3</button>
+                <button class="button">Option 4</button>
+            </div>
+            <br></br>
+            <h2 class="subtitle is-size-2 has-text-white">Preguntas Laboratorio 4:</h2>
+            <h3 class="question is-size-3 has-text-white">¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h3>
+            <p>La diferencia entre estos es que Java es un lenguaje compilado y el otro es un lenguaje interpretado.</p>
+
+            <h3 class="question is-size-3 has-text-white">¿Qué métodos tiene el objeto Date?</h3>
+            <ul>
+                <li>getDate(): Devuelve el día del mes. Número entre 1 y 31</li>
+                <li>getDay(): Devuelve el día de la semana. Entre 0 (domingo) y 6 (sábado)</li>
+                <li>getFullYear(): Devuelve el año con 4 dígitos</li>
+                <li>getMilliseconds(): Devuelve los milisegundos entre 0 y 9999</li>
+                <li>getMinutes(): Devuelve los minutos. Entre 0 y 59</li>
+            </ul>
+
+            <h3 class="question is-size-3 has-text-white">¿Qué métodos tienen los arreglos?</h3>
+            <ul>
+                <li>map(): Permite recorrer el array y modificar los elementos presentes en él, retornando un nuevo array con la misma longitud que el original.</li>
+                <li>filter(): Recorre el array y retorna un nuevo array con aquellos elementos que pasen una determinada condición.</li>
+                <li>forEach(): Permite iterar el contenido de un array. Recibe un callback que toma como parámetro el elemento actual de la iteración y el indice del mismo.</li>
+                <li>find(): Recorre el array y retorna la primera coincidencia del elemento que se busca.</li>
+                <li>sort(): Ordena los elementos del array y retorna el arreglo ordenado. Los elementos se ordenarán en orden ascendente (de la A a la Z) por defecto.</li>
+            </ul>
+
+            <h3 class="question is-size-3 has-text-white">¿Cómo se declara una variable con alcance local dentro de una función?</h3>
+            <p><b>let</b> es una palabra reservada que se utiliza para declarar variables locales.</p>
+
+            <h3 class="question is-size-3 has-text-white">¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h3>
+            <p><b>var</b> dentro de la función, se crea como una variable local, pero esto permite que el usuario maneje esta variable a su gusto.</p>
+            <br></br>
+            <h2 class="subtitle is-size-2 has-text-white">Preguntas Laboratorio 5:</h2>
+            <h3 class="question is-size-3 has-text-white">¿Qué es "Material Design"?</h3>
+            <p>Material Design es un lenguaje visual que sintetiza los principios clásicos del buen diseño con la innovación de la tecnología y la ciencia.</p>
+        </div>  
+    </div>
+    
+    <script src="Labo4.js"></script>   
+</body>
+
+</html>
