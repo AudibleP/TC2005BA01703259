@@ -1,99 +1,35 @@
-//fs: filesystem
-const filesystem = require('fs');
+const express = require('express');
+const app = express();
 
-filesystem.writeFileSync('hola.txt', 'Hola desde node');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended: false}));
 
 
-const arreglo = [5000, 60, 90, 100, 10, 10000, 20, 0, 120, 2000, 340, 1000, 50];
+const rutas_caballos = require('./routes/caballos.routes');
 
-for (let item of arreglo) {
-    setTimeout(() => {
-        console.log(item);
-    }, item);
-} 
+app.use('/caballos', rutas_caballos);
 
-const caballos = ["Spirit", "Tiro al Blanco", "Maxie"];
-
-const http = require('http');
-
-const server = http.createServer( (request, response) => {
-
-    if (request.url === '/') {
-        response.setHeader('Content-Type', 'text/html');
-        response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Caballos</title><meta charset="utf-8"></meta></head>');
-        response.write('<body>');
-        response.write('<h1>Bienvenido a este sitio de caballos chidos</h1>');
-        response.write('<main>');
-        response.write('<h2>Aquí se habla se de caballos</h2>');
-        response.write('<p>Estos son nuestros caballos:</p>');
-        response.write('<ol>');
-        for (let i in caballos) {
-            response.write('<li>' + caballos[i] + '</li>');
-        }
-        response.write('</ol>');
-        response.write('<a href="nuevo">Agregar un nuevo caballo</a>');
-        response.write('</main>');
-        response.write('</body>');
-        response.end();
-    } else if (request.url === '/nuevo' && request.method === 'GET') {
-        response.setHeader('Content-Type', 'text/html');
-        response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Caballos</title><meta charset="utf-8"></meta></head>');
-        response.write('<body>');
-        response.write('<h1>Bienvenido a este sitio de caballos chidos</h1>');
-        response.write('<main>');
-        response.write('<h2>Aquí se habla se de nuevos caballos</h2>');
-        response.write('<p>Ingresa los datos del nuevo caballo:</p>');
-        response.write('<form action="/nuevo" method="POST">');
-        response.write('<label for="nombre">Nombre del nuevo caballo: </label>');
-        response.write('<input type="text" name="nombre" required>');
-        response.write('<input type="submit" value="Enviar">');
-        response.write('</form>');
-        response.write('<br><br>');
-        response.write('<a href="/">Regresar a la lista de caballos</a>');
-        response.write('</br>');
-        response.write('</body>');
-        response.end();
-    } else if (request.url === '/nuevo' && request.method === 'POST') {
-        const datos = [];
-        request.on('data', (dato) => {
-            console.log(dato);
-            datos.push(dato);
-        });
-        return request.on('end', () => {
-            console.log(datos);
-            const datos_completos = Buffer.concat(datos).toString();
-            console.log(datos_completos);
-            const nuevo_dato = datos_completos.split('=')[1];
-            console.log(nuevo_dato);
-            caballos.push(nuevo_dato);
-            console.log(caballos);
-            response.setHeader('Content-Type', 'text/html');
-            response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Caballos</title><meta charset="utf-8"></meta></head>');
-            response.write('<body>');
-            response.write('<h1>Bienvenido a este sitio de caballos chidos</h1>');
-            response.write('<main>');
-            response.write('<h2>Aquí se habla se de caballos</h2>');
-            response.write('<h3>' + nuevo_dato + ' fue agregado a la lista.</h3>');
-            response.write('<p>Estos son nuestros caballos:</p>');
-            response.write('<ol>');
-            for (let i in caballos) {
-                response.write('<li>' + caballos[i] + '</li>');
-            }
-            response.write('</ol>');
-            response.write('<a href="nuevo">Agregar un nuevo caballo</a>');
-            response.write('</main>');
-            response.write('</body>');
-            return response.end();
-        });
-    } else {
-        response.statusCode = 404;
-        response.setHeader('Content-Type', 'text/html');
-        response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Caballos | Page not found</title><meta charset="utf-8"></meta></head>');
-        response.write('<body>');
-        response.write('<h1>La página '+ request.url +' no se encontró</h1>');
-        response.write('</body>');
-        response.end();
-    }
+//Middleware
+app.use((request, response, next) => {
+    console.log('Middleware!');
+    next(); //Le permite a la petición avanzar hacia el siguiente middleware
 });
 
-server.listen(3000);
+app.use('/ruta', (request, response, next) => {
+    console.log('Respuesta de la ruta "/ruta"');
+    response.send('Respuesta de la ruta "/ruta"'); 
+});
+
+app.use('/hola', (request, response, next) => {
+    console.log('Respuesta de la ruta "/hola"');
+    response.send('¡Hola! Esta es la respuesta de la ruta "/hola"'); 
+});
+
+
+app.use((request, response, next) => {
+    console.log('Otro middleware!');
+    response.send('¡Hola mundo!'); //Manda la respuesta
+});
+
+app.listen(3000);
