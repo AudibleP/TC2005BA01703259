@@ -22,7 +22,7 @@ const server = http.createServer( (request, response) => {
         response.setHeader('Content-Type', 'text/html');
         response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Caballos</title><meta charset="utf-8"></meta></head>');
         response.write('<body>');
-        response.write('<h1>Bienvenido a este sitio de caballos</h1>');
+        response.write('<h1>Bienvenido a este sitio de caballos chidos</h1>');
         response.write('<main>');
         response.write('<h2>Aquí se habla se de caballos</h2>');
         response.write('<p>Estos son nuestros caballos:</p>');
@@ -39,7 +39,7 @@ const server = http.createServer( (request, response) => {
         response.setHeader('Content-Type', 'text/html');
         response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Caballos</title><meta charset="utf-8"></meta></head>');
         response.write('<body>');
-        response.write('<h1>Bienvenido a este sitio de caballos</h1>');
+        response.write('<h1>Bienvenido a este sitio de caballos chidos</h1>');
         response.write('<main>');
         response.write('<h2>Aquí se habla se de nuevos caballos</h2>');
         response.write('<p>Ingresa los datos del nuevo caballo:</p>');
@@ -70,7 +70,7 @@ const server = http.createServer( (request, response) => {
             response.setHeader('Content-Type', 'text/html');
             response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Caballos</title><meta charset="utf-8"></meta></head>');
             response.write('<body>');
-            response.write('<h1>Bienvenido a este sitio de caballos</h1>');
+            response.write('<h1>Bienvenido a este sitio de caballos chidos</h1>');
             response.write('<main>');
             response.write('<h2>Aquí se habla se de caballos</h2>');
             response.write('<h3>' + nuevo_dato + ' fue agregado a la lista.</h3>');

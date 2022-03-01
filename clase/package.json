@@ -1,0 +1,26 @@
+{
+  "name": "spirit",
+  "version": "1.0.0",
+  "description": "Codigo de clase de Lalo",
+  "main": "croissant.js",
+  "scripts": {
+    "start": "nodemon croissant.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AudibleP/TC2005BA01703259.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Ricardo Nunez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AudibleP/TC2005BA01703259/issues"
+  },
+  "homepage": "https://github.com/AudibleP/TC2005BA01703259#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
