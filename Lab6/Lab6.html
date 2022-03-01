@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Laboratory 6</title>
+    </head>
+    <body>
+        <header>
+            <h1>Lab6: Programación Orientada a Eventos</h1> 
+        </header>
+        <section>
+            <h2>Validate Password</h2>
+            <br>
+            <div class="validarpass">
+                <label for="pass">Password: </label>
+                <input id="password" type="password" placeholder= "Password"> <br>
+
+                <label for="Validate">Validate Password: </label>
+                <input id="secondPassword" type="password" placeholder= "Re-enter Password">
+
+                <p id="passInput"></p>
+
+                <button id = "Validate">Validate</button>
+            </div>
+            <br>
+            <h2><b>Shopping Cart</b></h2>
+            <br>
+            <div class="carritoProducto">
+                <div class="producto">
+                    <h2>Nintendo Switch</h2>
+                    <img src="https://media.giphy.com/media/hVCqy6BjbifOIwcDvQ/giphy.gif">
+                    <h3> $ <span id="NS_Price">5000</span></h3>
+                    <p id="amount_NS">0</p>
+                    <button id="nintendoSwitchAdd">+</button>
+                    <button id="nintendoSwitchRemove">-</button>
+
+                    <h2>Super Nintendo Entertainment System</h2>
+                    <img src="https://media.giphy.com/media/bKugqojssQSEo/giphy.gif">
+                    <h3> $ <span id="SNES_Price">3000</span></h3>
+                    <p id="amount_SNES">0</p>
+                    <button id="SNESAdd">+</button>
+                    <button id="SNESRemove">-</button>
+
+                    <h2>Nintendo 64</h2>
+                    <img src="https://media.giphy.com/media/by6Q212oDGV8c/giphy.gif">
+                    <h3> $ <span id="N64_Price">4000</span></h3>
+                    <p id="amount_N64">0</p>
+                    <button id="N64Add">+</button>
+                    <button id="N64Remove">-</button>
+
+                <h2>Total (with IVA): <a id="total">0</a></h2>
+                </div>
+            </div>
+            <article>
+                <h3> Preguntas: </h3>
+                <p> 1. ¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor? </p>
+                <p> R1. Para que el usuario tenga una manera mas facil de saber que caracteres no son validos</p>
+                <p> 2. ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript? </p>
+                <p> R2. Deshabilitanfo los scripts en el navegador</p>
+                <p> 3. Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿Por qué la primera pregunta dice que es una buena práctica?</p>
+                <p> R3. Evitar vulnerabilidades en las paginas</p>
+            </article>
+        </section>
+        <br>
+        <script src="Labo6.js"></script> 
+    </body>
+</html>
