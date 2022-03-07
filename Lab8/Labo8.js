@@ -28,7 +28,30 @@ const readline = require('readline').createInterface({
     readline.close();
   });
 
-// -------------------------------------
+// ----------------Exercise3---------------------
+//Bubble Sort
+function bubble(_array)
+{
+    for(j=0;j<_array.length;j++)
+    {
+        for(i=0;i<_array.length;i++)
+        {
+            //Si el elemento en array[i] es mayor al elemento que sigue
+            if(_array[i]>_array[i+1])
+            {
+                //Realizamos un swap
+                var aux=_array[i];
+                _array[i]=_array[i+1];
+                _array[i+1]=aux;
+            }
+        }
+    }
+    return _array;
+}
+console.log('El array ordenado de',arr, )
+let Test = bubble(arr);
+console.log('es:',Test)
+// ---------------------------------------------
 
 const http = require('http');
 const server = http.createServer((request, response) => {
@@ -36,5 +59,7 @@ const server = http.createServer((request, response) => {
     response.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Laboratorio 8 </title></head><body><h5>la cerveza es buena y bonita</h5></body></html>');
     response.end();
 });
+
+// -------------------------------------
 
 server.listen(3000);
