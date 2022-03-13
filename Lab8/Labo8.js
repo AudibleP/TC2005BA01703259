@@ -56,7 +56,7 @@ console.log('es:',Test)
 const http = require('http');
 const server = http.createServer((request, response) => {
     response.setHeader('Content-Type', 'text/html');
-    response.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Laboratorio 8 </title></head><body><h5>la cerveza es buena y bonita</h5></body></html>');
+    response.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Laboratorio 8 </title></head><body><h1>Ricardo Nunez Alanis</h1></body></html>');
     response.end();
 });
 
